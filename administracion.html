@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="./js/scripts.js"></script>
+    <link rel="stylesheet" href="css/style.css" /> 
+    <title>1° PARCIAL LABORATORIO III</title>
+  </head>
+  <body>
+    <header>
+      <nav class="icon-bar">
+        <ul>
+          <li><a href="/index.html" class="logo"></a></li>                
+          <li><a href="index.html">Nosotros</a></li>
+          <li><a href="administracion.html">Anuncio</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>     
+      </nav>
+    </header>
+    <h1 class="title">Administración</h1>
+    <div>
+      <img class="banner" src="./assets/banner.jpg" alt="banner" />
+    </div>
+    <main>
+      <div class="container" id="parent">
+        <section class="carga-datos" id="narrow">
+          <h2 id="tituloForm"></h2>
+          <form id="frm">
+            <input type="hidden" id="txtId" name="txtId">
+            <input class="form-style" type="text" id="txtTitulo" name="txtTitulo" placeholder="TITULO" autocomplete="off" required>  
+            <select class="form-style" name="txtTransaccion" id="txtTransaccion" required>
+              <option value="" disabled selected>---ELEGIR TRANSACCION---</option>
+              <option value="Venta">Venta</option>
+              <option value="Alquiler">Alquiler</option>
+              <option value="Permuta">Permuta</option>              
+            </select>
+            <textarea class="form-style" id="txtDescripcion" name="txtDescripcion" rows="2"  placeholder="DESCRIPCION" autocomplete="off" required></textarea>
+            
+            <div class="inputWithIcon">
+              <input class="form-style" type="number" id="txtPrecio" name="txtPrecio" placeholder="PRECIO" autocomplete="off" required min="1" >
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            
+            <div class="inputWithIcon">
+              <input class="form-style"type="number" id="txtPuertas" name="txtPuertas" placeholder="PUERTAS" autocomplete="off" required min="1">
+              <i class="fas fa-door-open" aria-hidden="true"></i>
+            </div>
+
+            <div class="inputWithIcon">
+              <input class="form-style" type="number" id="txtKms" name="txtKms" placeholder="KMs" autocomplete="off" required min="0">
+              <i class="fa fa-tachometer-alt" aria-hidden="true"></i>
+            </div>
+            
+            <div class="inputWithIcon">
+              <input class="form-style" type="number" id="txtPotencia" name="txtPotencia" placeholder="POTENCIA" autocomplete="off" required min="1">
+              <i class="fas fa-bolt" aria-hidden="true"></i>
+            </div>
+
+            <div id = "myList" name="caracteristicas">
+                <input type="checkbox" id="txtPolarizado" name="Polarizado" value="Polarizado">
+                <label for="Venta"> Polarizado</label>
+                <input type="checkbox" id="txtCierre" name="Cierre" value="Cierre">
+                <label for="Alquiler"> Cierre centralizado</label>
+                <input type="checkbox" id="txtAlarma" name="Alarma" value="Alarma">
+                <label for="Permuta"> Alarma</label>                      
+            </div>                        
+            
+            <br>
+
+            <div class="buttons">             
+              <input class="btn-style" type="submit" id="btnSubmit" value="Enviar">
+              <input class="btn-style" type="submit"  id="btnModify" value="Modificar" hidden="hidden">
+              <input class="btn-style" type="button" id="btnDelete" value="Eliminar" hidden="hidden">
+              <input class="btn-style" type="reset"  id="btnCancel" value="Cancelar" hidden="hidden">
+            </div>
+
+          </form>        
+        </section>
+        <div id="divAlert"></div>
+        
+        <section class="lista-elementos" id="wide">
+          <h2>LISTADO DE ANUNCIOS</h2>
+          <div id="divTabla"></div>
+        </section>
+
+      </div>
+    </main>
+
+    <br>
+
+    <footer>
+      <nav>
+          <ul>
+              <li><a href="index.html">Nosotros</a></li>
+              <li><a href="./administracion.html">Anuncio</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contacto</a></li>
+          </ul>
+      </nav>
+      <p>Todos los derechos reservados  <date>2021</date> &copy;</p>
+  </footer>
+  </body>
+  
+</html>
