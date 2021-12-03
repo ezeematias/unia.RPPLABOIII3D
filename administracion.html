@@ -9,8 +9,8 @@
     <title>1° PARCIAL LABORATORIO III</title>
   </head>
   <body>
-    <header>
-      <nav class="icon-bar">
+    <header class="icon-bar">
+      <nav >
         <ul>
           <li><a href="/index.html" class="logo"></a></li>                
           <li><a href="index.html">Nosotros</a></li>
@@ -30,13 +30,15 @@
           <h2 id="tituloForm"></h2>
           <form id="frm">
             <input type="hidden" id="txtId" name="txtId">
-            <input class="form-style" type="text" id="txtTitulo" name="txtTitulo" placeholder="TITULO" autocomplete="off" required>  
+            <input class="form-style" type="text" id="txtTitulo" name="txtTitulo" placeholder="TITULO" autocomplete="off" required>              
+
             <select class="form-style" name="txtTransaccion" id="txtTransaccion" required>
               <option value="" disabled selected>---ELEGIR TRANSACCION---</option>
               <option value="Venta">Venta</option>
               <option value="Alquiler">Alquiler</option>
               <option value="Permuta">Permuta</option>              
-            </select>
+            </select>           
+    
             <textarea class="form-style" id="txtDescripcion" name="txtDescripcion" rows="2"  placeholder="DESCRIPCION" autocomplete="off" required></textarea>
             
             <div class="inputWithIcon">
@@ -59,17 +61,24 @@
               <i class="fas fa-bolt" aria-hidden="true"></i>
             </div>
 
-            <div id = "myList" name="caracteristicas">
+            <div id = "myList" name="caracteristicas" class="form-style">
                 <input type="checkbox" id="txtPolarizado" name="Polarizado" value="Polarizado">
                 <label for="Venta"> Polarizado</label>
                 <input type="checkbox" id="txtCierre" name="Cierre" value="Cierre">
                 <label for="Alquiler"> Cierre centralizado</label>
                 <input type="checkbox" id="txtAlarma" name="Alarma" value="Alarma">
                 <label for="Permuta"> Alarma</label>                      
-            </div>                        
+            </div> 
+            
+            <div class="form-style">
+                <legend>Seguro</legend>
+                <br>
+                <input type="radio" name="transaccion" id="txtTerceros" value="Terceros" checked>Terceros completo
+                <input type="radio" name="transaccion" id="txtGranizo" value="Granizo">Contra Granizo
+                <input type="radio" name="transaccion" id="txtRiesgo" value="Riesgo">Contra todo Riesgo
+            </div>
             
             <br>
-
             <div class="buttons">             
               <input class="btn-style" type="submit" id="btnSubmit" value="Enviar">
               <input class="btn-style" type="submit"  id="btnModify" value="Modificar" hidden="hidden">
@@ -79,13 +88,13 @@
 
           </form>        
         </section>
-        <div id="divAlert"></div>
-        
+        <div id="divAlert" onclick="display='none';"><span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>           
+        </div>
+
         <section class="lista-elementos" id="wide">
           <h2>LISTADO DE ANUNCIOS</h2>
           <div id="divTabla"></div>
         </section>
-
       </div>
     </main>
 

@@ -1,7 +1,7 @@
 import Anuncio from "./anuncio-base.js";
 
 export class Anuncio_Auto extends Anuncio {
-    constructor(id, titulo, transaccion, descripcion, precio, puertas, kms, potencia, polarizado, cierre, alarma){
+    constructor(id, titulo, transaccion, descripcion, precio, puertas, kms, potencia, polarizado, cierre, alarma, seguro){
         super(id, titulo, transaccion, descripcion, precio);
         this.puertas = puertas;
         this.kms = kms;
@@ -9,5 +9,6 @@ export class Anuncio_Auto extends Anuncio {
         this.polarizado = polarizado;
         this.cierre = cierre;
         this.alarma = alarma;
+        this.seguro = seguro;
     }
 }

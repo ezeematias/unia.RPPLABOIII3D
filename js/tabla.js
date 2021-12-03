@@ -44,6 +44,9 @@ export const crearTabla = (data)=>{
                     break;  
                 case "alarma":
                     th.textContent = "Alarma";
+                    break; 
+                case "seguro":
+                    th.textContent = "Seguro";
                     break;  
                 default:
                     th.textContent = key;
@@ -57,9 +60,7 @@ export const crearTabla = (data)=>{
     
     //cargo el tbody
     data.forEach((element) => {
-
         const tr = document.createElement("tr");
-
         for (const key in element) {
             if(key === "id"){
                 tr.setAttribute("id", element[key]);
@@ -81,7 +82,6 @@ export const crearTabla = (data)=>{
                 tr.appendChild(td);
             }
         }
-
         tbody.appendChild(tr);    
     });
 
